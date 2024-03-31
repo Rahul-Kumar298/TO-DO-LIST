@@ -5,7 +5,7 @@ import json
 root = tk.Tk()
 root.title("To Do List")
 root.geometry("300x250")
-root.configure(background='lightgreen')
+root.configure(background='lightblue')
 
 def load_data(filename):
     try:
