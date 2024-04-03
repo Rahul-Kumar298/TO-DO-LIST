@@ -6,6 +6,7 @@ root = tk.Tk()
 root.title("To Do List")
 root.geometry("300x250")
 root.configure(background='lightblue')
+root.wm_iconbitmap("1.ico")
 
 def load_data(filename):
     try:
