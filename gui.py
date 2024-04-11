@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import json
-
+import os
 root = tk.Tk()
 root.title("To Do List")
 root.geometry("300x250")
@@ -23,7 +23,6 @@ def save_data(filename, data):
 data = load_data('data.json')
 
 tasks = data['tasks']
-
 def add_task():
     task = entry.get()
     tasks.append(task)
@@ -36,7 +35,7 @@ def list_tasks():
         task_list.insert(tk.END, task)
 
 def delete_task():
-    # Get the index of the selected task
+        # Get the index of the selected task
     selected_index = task_list.curselection()
     if selected_index:
         task_index = selected_index[0]
@@ -70,14 +69,12 @@ b4.grid(row=8, column=1)
 b5 = tk.Button(root, text="Exit", command=root.quit)
 b5.grid(row=9, column=1)
 
-# label_task = tk.Label(root, text=" TASKS :", font="PlayfairDisplay 10 bold")
-# label_task.grid(row=4, column=1)
-
-# Create a Listbox to display tasks
+    # Create a Listbox to display tasks
 task_list = tk.Listbox(root)
 task_list.grid(row=2, column=2, rowspan=9, padx=8, pady=8)
 
-# Initially populate the list of tasks
+    # Initially populate the list of tasks
 
 root.mainloop()
 
+# Check if the script is being run directly
