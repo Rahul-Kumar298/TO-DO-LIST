@@ -9,7 +9,7 @@ root.geometry("350x250")
 root.minsize(350,250)
 root.maxsize(350,250)
 root.configure(background='aqua')
-root.wm_iconbitmap("1.ico")
+root.wm_iconbitmap("D:/python/Project/To Do List/TO-DO-LIST/1.ico")
 
 
 def load_data(filename):
